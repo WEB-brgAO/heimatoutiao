@@ -1,11 +1,7 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div>
-  </div>
+ <router-view></router-view>
 </template>
 
-<style lang="less">
+<style lang='less' scoped>
 
 </style>

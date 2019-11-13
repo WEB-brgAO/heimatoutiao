@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
+import login from '../components/login.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-  path: '/',
-  name: 'home',
-  component: Home
-}
+const routes = [
+  {
+    path: '/login',
+    component: login
+  }
   // 按需加载
   // {
   //   path: '/about',
