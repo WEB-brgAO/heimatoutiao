@@ -67,9 +67,10 @@ export default {
           // console.log('校验成功')
           // console.log(this)
 
-          // this.$axios.post('/authorizations', this.loginForm).then(res => {
-          //   console.log(res)
-          // })
+          this.$axios.post('/authorizations', this.loginForm).then(res => {
+            // console.log(res.data.data.token)
+            window.localStorage.setItem('toutiao', res.data.data.token)
+          })
         }
       })
     }
