@@ -70,6 +70,12 @@ export default {
           this.$axios.post('/authorizations', this.loginForm).then(res => {
             // console.log(res.data.data.token)
             window.localStorage.setItem('toutiao', res.data.data.token)
+            this.$router.push('/home')
+          }).catch(() => {
+            this.$message({
+              message: '手机号或验证码错误',
+              type: 'warning'
+            })
           })
         }
       })
