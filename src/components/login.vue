@@ -28,6 +28,7 @@
 </template>
 
 <script>
+// import { log } from 'util'
 export default {
   data () {
     return {
@@ -61,9 +62,14 @@ export default {
   },
   methods: {
     fn (loginForm) {
-      this.$refs.loginForm.validate(function (isOK) {
+      this.$refs.loginForm.validate((isOK) => {
         if (isOK) {
-          console.log('校验成功')
+          // console.log('校验成功')
+          // console.log(this)
+
+          // this.$axios.post('/authorizations', this.loginForm).then(res => {
+          //   console.log(res)
+          // })
         }
       })
     }
