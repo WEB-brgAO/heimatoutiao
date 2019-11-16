@@ -10,11 +10,9 @@
        <span class="el-dropdown-link">
         用户名<i class="el-icon-arrow-down el-icon--right"></i>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item >黄金糕</el-dropdown-item>
-          <el-dropdown-item >狮子头</el-dropdown-item>
-          <el-dropdown-item >螺蛳粉</el-dropdown-item>
-          <el-dropdown-item >双皮奶</el-dropdown-item>
-          <el-dropdown-item >蚵仔煎</el-dropdown-item>
+          <el-dropdown-item >个人中心</el-dropdown-item>
+          <el-dropdown-item >git地址</el-dropdown-item>
+          <el-dropdown-item @click.native='fn'>退出</el-dropdown-item>
       </el-dropdown-menu>
       </span>
      </el-dropdown>
@@ -24,7 +22,12 @@
 
 <script>
 export default {
-
+  methods: {
+    fn () {
+      window.localStorage.removeItem('toutiao')
+      this.$router.push('/login')
+    }
+  }
 }
 </script>
 
